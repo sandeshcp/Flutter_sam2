@@ -11,6 +11,21 @@ on:
   schedule:
     - cron: '*/1 * * * *'
 
+jobs:
+  merge-to-main:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Merge Dhiwise-v9o23L7a to main
+        run: |
+          git checkout main
+          git pull origin main
+          git merge origin/Dhiwise-v9o23L7a --no-edit
+          git push origin main
+
 # name: CodeQL
 
 # on:
