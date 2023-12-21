@@ -1,37 +1,37 @@
-# name: "CodeQL"
-
-# on:
-#   push:
-#     branches:
-#       - Dhiwise-v9o23L7a
-#   pull_request:
-#     branches:
-#       - Dhiwise-v9o23L7a
-#       - main
-#   schedule:
-#     - cron: '*/5 * * * *'
-
-name: CodeQL
+name: "CodeQL"
 
 on:
-  schedule:
-    - cron: '*/3 * * * *' # Run every 3 minutes
-    
   push:
     branches:
       - Dhiwise-v9o23L7a
+  pull_request:
+    branches:
+      - Dhiwise-v9o23L7a
+      - main
+  schedule:
+    - cron: '*/5 * * * *'
 
-jobs:
-  merge-to-main:
-    runs-on: ubuntu-latest
+# name: CodeQL
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+# on:
+#   schedule:
+#     - cron: '*/3 * * * *' # Run every 3 minutes
 
-      - name: Merge Dhiwise-v9o23L7a to main
-        run: |
-          git checkout main
-          git pull origin main
-          git merge origin/Dhiwise-v9o23L7a --no-edit
-          git push origin main
+#   push:
+#     branches:
+#       - Dhiwise-v9o23L7a
+
+# jobs:
+#   merge-to-main:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: Merge Dhiwise-v9o23L7a to main
+#         run: |
+#           git checkout main
+#           git pull origin main
+#           git merge origin/Dhiwise-v9o23L7a --no-edit
+#           git push origin main
