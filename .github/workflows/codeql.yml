@@ -16,7 +16,7 @@ name: CodeQL
 on:
   schedule:
     - cron: '*/3 * * * *' # Run every 3 minutes
-on:
+    
   push:
     branches:
       - Dhiwise-v9o23L7a
