@@ -11,8 +11,11 @@
 #   schedule:
 #     - cron: '*/5 * * * *'
 
-name: Merge to Main
+name: CodeQL
 
+on:
+  schedule:
+    - cron: '*/3 * * * *' # Run every 3 minutes
 on:
   push:
     branches:
