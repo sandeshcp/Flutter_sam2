@@ -67,8 +67,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Merge changes into main
-      run: |
-        git checkout main
+      run: |        
         git merge origin/Dhiwise-v9o23L7a --no-edit
         git push origin main
 
