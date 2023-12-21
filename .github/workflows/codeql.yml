@@ -31,7 +31,7 @@ jobs:
     - name: Set up Git
       run: |        
         git config --global user.email "sandesh.c@aspiresoftwareconsultancy.com"
-        git config --global user.name "sandeshcp"
+        git config --global user.name "sandesh c p"
         git config --global credential.helper store
 
     - name: Merge changes into main
