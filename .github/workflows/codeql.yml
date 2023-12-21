@@ -62,12 +62,11 @@ jobs:
   push_to_main:
     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+   
 
     - name: Merge changes into main
-      run: |        
+      run: |
+        git checkout main
         git merge origin/Dhiwise-v9o23L7a --no-edit
         git push origin main
 
