@@ -11,44 +11,6 @@
 #   schedule:
 #     - cron: '*/1 * * * *'
 
-# jobs:
-#   merge-to-main:
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-
-#       - name: Merge Dhiwise-v9o23L7a to main
-#         run: |
-#           git checkout main
-#           git pull origin main
-#           git merge origin/Dhiwise-v9o23L7a --no-edit
-#           git push origin main
-
-# # name: CodeQL
-
-# # on:
-# #   schedule:
-# #     - cron: '*/3 * * * *' # Run every 3 minutes
-
-# #   push:
-# #     branches:
-# #       - Dhiwise-v9o23L7a
-
-# # jobs:
-# #   merge-to-main:
-# #     runs-on: ubuntu-latest
-
-# #     steps:
-# #       - name: Checkout code
-# #         uses: actions/checkout@v2
-
-# #       - name: Merge Dhiwise-v9o23L7a to main
-# #         run: |
-# #           git checkout main
-# #           git pull origin main
-# #           git merge origin/Dhiwise-v9o23L7a --no-edit
-# #           git push origin main
-
 
 
 name: Push to Main
@@ -64,12 +26,13 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
 
     - name: Set up Git
       run: |        
         git config --global user.email "sandesh.c@aspiresoftwareconsultancy.com"
         git config --global user.name "sandeshcp"
+        git config --global credential.helper store
 
     - name: Merge changes into main
       run: |
