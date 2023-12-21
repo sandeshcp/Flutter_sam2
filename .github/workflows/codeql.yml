@@ -22,7 +22,7 @@ on:
 
 jobs:
   push_to_main:
-    runs-on: ubuntu-latest
+    
 
     steps:
     - name: Checkout code
