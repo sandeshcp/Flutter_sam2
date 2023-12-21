@@ -9,7 +9,7 @@ on:
       - Dhiwise-v9o23L7a
       - main
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/1 * * * *'
 
 # name: CodeQL
 
