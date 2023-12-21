@@ -1,0 +1,12 @@
+name: "CodeQL"
+
+on:
+  push:
+    branches:
+      - Dhiwise-v9o23L7a
+  pull_request:
+    branches:
+      - Dhiwise-v9o23L7a
+      - main
+  schedule:
+    - cron: '*/5 * * * *'
