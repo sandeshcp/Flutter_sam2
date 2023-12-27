@@ -1,12 +1,42 @@
-name: "CodeQL"
+# name: "CodeQL"
+
+# on:
+#   push:
+#     branches:
+#       - Dhiwise-v9o23L7a
+#   pull_request:
+#     branches:
+#       - Dhiwise-v9o23L7a
+#       - main
+#   schedule:
+#     - cron: '*/1 * * * *'
+
+
+
+name: Push to Main
 
 on:
   push:
     branches:
       - Dhiwise-v9o23L7a
-  pull_request:
-    branches:
-      - Dhiwise-v9o23L7a
-      - main
-  schedule:
-    - cron: '*/5 * * * *'
+
+jobs:
+  push_to_main:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Git
+      run: |        
+        git config --global user.email "sandesh.c@aspiresoftwareconsultancy.com"
+        git config --global user.name "sandesh c p"
+        git config --global credential.helper store
+
+    - name: Merge changes into main
+      run: |
+        git checkout main
+        git merge origin/Dhiwise-v9o23L7a --no-edit
+        git push main
+
