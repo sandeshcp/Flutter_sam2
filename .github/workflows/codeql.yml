@@ -38,5 +38,5 @@ jobs:
       run: |
         git checkout main
         git merge origin/Dhiwise-v9o23L7a --no-edit
-        git push main
+        git push origin/main
 
