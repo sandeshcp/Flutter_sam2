@@ -36,7 +36,7 @@ jobs:
 
     - name: Merge changes into main
       run: |
-        git checkout main
+        git checkout origin/main
         git merge origin/Dhiwise-v9o23L7a --no-edit
-        git push main
+        git push origin/main
 
